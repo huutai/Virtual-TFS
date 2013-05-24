@@ -1,0 +1,15 @@
+﻿@{
+    ViewBag.Title = "About";
+    Layout = "~/Views/Shared/SiteLayout.cshtml";
+}
+
+<div>
+Team Foundation Server works in a three-tier architecture: the client tier, 
+the application tier and the data tier. The client tier is used for creating 
+and managing projects and accessing the items that are stored and managed for
+ a project. TFS does not include any user interface for this tier, rather it 
+ exposes web services which client applications can use to integrate TFS functionality with themselves. These web services are used by applications like Visual Studio Team System to use TFS as data storage back end or dedicated TFS management applications like the included Team Foundation Client. The web services are in the application layer. The application
+  layer also includes a web portal and a document repository facilitated by Windows 
+  SharePoint Services. The web portal, called the Team Project Portal, acts as the 
+  central point of communication for projects managed by TFS. The document repository is used for both project items and the revisions tracked, as well as for aggregated data and generated reports. The data layer, essentially an SQL Server 2005 Standard Edition installation, provides the persistent data storage services for the document repository. The data tier and application tier can exist on different physical or virtual servers as well, provided they are running Windows Server 2003 or later. The data tier is not exposed to the client tier; only the application tier is.
+</div>

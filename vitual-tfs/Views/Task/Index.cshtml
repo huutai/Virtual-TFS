@@ -1,0 +1,115 @@
+﻿@model VirtualTFS.Models.TaskViewModel
+@{
+    ViewBag.Title = "CreateTask";
+    Layout = "~/Views/Shared/SiteLayout.cshtml";
+}
+<script type="text/javascript" src="@Url.Content("/Scripts/knockout-2.2.1.js")"></script>
+<script type="text/javascript" src="@Url.Content("/Scripts/jtable/jquery.jtable.min.js")"></script>
+<script type="text/javascript" src="@Url.Content("/Scripts/ViewModels/vm.task.js")"></script>
+<script type="text/javascript">
+    $(function () {
+        $("#tabs").tabs();
+    });
+</script>
+<div class="line">
+    <div class="float-left">
+        Tilte:
+    </div>
+    <div class="float-left fulfill">
+        <input data-bind="value: title" type="text" />
+    </div>
+</div>
+<div class="line">
+    <div class="float-left">
+        Iteration:
+    </div>
+    <div class="float-left fulfill">
+        <select data-bind ="options: iterationList, optionsValue: 'Id', optionsText: 'Name', value: iterationSelected" ></select>
+    </div>
+</div>
+<div class="clear">
+</div>
+<div class="clear">
+</div>
+<fieldset class="float-left">
+    <legend>Status</legend>
+    <div class="line">
+        <div class="float-left">
+            Assigned To:
+        </div>
+        <div class="float-left">
+            <select data-bind="options: assignedList, optionsValue: 'UserId', optionsText: 'UserName', value: assignedSelected">
+            </select>
+        </div>
+    </div>
+    <div class="line">
+        <div class="float-left">
+            State:
+        </div>
+        <div class="float-left">
+             <select data-bind="options: stateList , optionsValue: 'Id', optionsText: 'Name', value: stateSelected">
+            </select>
+        </div>
+    </div>
+    <div class="line">
+        <div class="float-left">
+            Blocked:
+        </div>
+        <div class="float-left">
+            <select data-bind="options: blockList, optionsValue: 'Id', optionsText: 'Name', value: blockSelected"></select>
+        </div>
+    </div>
+</fieldset>
+<fieldset class="float-left">
+    <legend>Detail</legend>
+    <div class="line">
+        <div class="float-left">
+            Remaining Work:</div>
+        <div class="float-left">
+            <input data-bind= "value: remainingWork" type="text" />
+        </div>
+    </div>
+    <div class="line">
+        <div class="float-left">
+            Priority:</div>
+        <div class="float-left">
+            <input data-bind="value: priority" type ="text" />
+        </div>
+    </div>
+    <div class="line">
+        <div class="float-left">
+            Activity:</div>
+        <div class="float-left">
+            <select data-bind="options: activityList, optionsValue: 'Id', optionsText: 'Name'"></select>
+        </div>
+    </div>
+    <div class="line">
+        <div class="float-left">
+            Area:
+        </div>
+        <div class="float-left">
+            <select data-bind="options: areaList, optionsValue: 'Id', optionsText: 'NameArea', value: areaSelected"></select>
+        </div>
+    </div>
+</fieldset>
+<div><button data-bind="click: create">Create</button></div>
+<div class="clear">
+</div>
+<div id="tabs">
+    <ul>
+        <li><a href="#tabs-1">Description</a></li>
+        <li><a href="#tabs-2">Details</a></li>
+        <li><a href="#tabs-3">Critical</a></li>
+    </ul>
+    <div id="tabs-1">
+     <div class ="area-des">
+            <textarea name="txaDes" data-bind="value: description"></textarea>
+        </div>
+    </div>
+    <div id="tabs-2">
+    </div>
+    <div id="tabs-3">
+    </div>
+</div>
+<div>
+</div>

@@ -1,0 +1,116 @@
+﻿html
+{
+    margin: 0;
+    padding: 0;
+}
+
+body
+{
+    width: 960px;
+    margin: 0px auto;
+}
+
+#container
+{
+    margin: 0;
+}
+
+#header
+{
+    background: #0094ff;
+}
+
+#navigation
+{
+    margin: 0;
+}
+
+    #navigation ul
+    {
+        margin: 0;
+        padding: 0;
+    }
+
+        #navigation ul li
+        {
+            background: #ffd800;
+            display: inline-block;
+            line-height: 25px;
+            width: 100px;
+            text-align: center;
+            margin: 0;
+        }
+
+    #navigation li a
+    {
+        text-decoration: none;
+    }
+
+        #navigation li a:hover
+        {
+        }
+
+#content-container
+{
+    margin: 10px;
+}
+
+#section-navigation
+{
+    float: left;
+    width: 20%;
+}
+
+    #section-navigation ul li
+    {
+        display: block;
+    }
+
+#content
+{
+    width: 80%;
+    float: left;
+}
+
+#footer
+{
+    clear: left;
+}
+
+.line
+{
+    line-height: 30px;
+    clear: both;
+}
+
+.float-left
+{
+    margin: 3px;
+    float: left;
+    min-width: 120px;
+}
+
+.fulfill
+{
+    width: 80%;
+}
+
+fieldset.float-left
+{
+    width: 45%;
+}
+
+.float-left input[type=text], select
+{
+    width: 100%;
+}
+
+.float-right
+{
+    float: right;
+}
+
+.clear
+{
+    clear: both;
+}

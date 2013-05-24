@@ -1,0 +1,51 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/SiteLayout.cshtml";
+}
+
+<div id="TaskTableContainer">
+</div>
+<script type="text/javascript">
+
+    $(document).ready(function () {
+
+        $('#TaskTableContainer').jtable({
+            title: 'Task List',
+            paging: true,
+            pageSize: 10,
+            sorting: true,
+            defaultSorting: 'Name ASC',
+            actions: {
+                listAction: '/Home/GetTaskList',
+            },
+            fields: {
+                TaskId: {
+                    title: 'Id',
+                    key: true,
+                    create: false,
+                    edit: false,
+                    width: '23%'
+                },
+                Title: {
+                    title: 'Title',
+                    width: '23%'
+                },                
+                StatusName: {
+                    title: 'State',
+                },
+                UserName: {
+                    title: 'Assigned To',
+                },
+                CreatedDate: {
+                    title: 'Created Date',
+                    type: 'date',
+                    displayFormat: 'yy-mm-dd'
+                },
+
+            }
+        });
+
+        $('#TaskTableContainer').jtable('load');
+    });
+
+</script>
